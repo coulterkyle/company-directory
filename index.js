@@ -142,7 +142,7 @@ function addDepartment() {
         ])
         .then((data) => {
             console.log(data)
-            db.query(`INSERT INTO department (id, name) VALUES ("${data.department}");`)
+            db.query(`INSERT INTO department (name) VALUES ("${data.department}");`)
             console.log('Department added!');
             CLI()
         });
